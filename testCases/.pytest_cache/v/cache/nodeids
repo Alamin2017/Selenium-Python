@@ -1,0 +1,11 @@
+[
+  "test_bkash.py::Test_Bkash::test_bkashurlopen",
+  "test_bkash.py::Test_Bkash::test_hubspot",
+  "test_bkash.py::Test_Bkash::test_title2",
+  "test_login.py::Test_001_login::test_homePageTitle",
+  "test_login.py::Test_001_login::test_login",
+  "test_login2.py::Test_001_login::test_homePageTitle",
+  "test_login2.py::Test_001_login::test_login",
+  "test_login_ddt.py::Test_002_DDT_login::test_login_ddt",
+  "test_shareBus.py::Test_ShareBus::test_just"
+]
