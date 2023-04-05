@@ -1,8 +1,9 @@
-from pageObjects.BasePage import Basepage
+# from pageObjects.BasePage import Basepage
+from utilities.BasePage import BasePage
 from selenium.webdriver.common.by import By
 
 
-class LoginPage2(Basepage):
+class LoginPage2(BasePage):
     EMAIL = (By.ID, "username")
     PASSWORD = (By.ID, "password")
     LOGIN_BUTTON = (By.ID, "loginBtn")

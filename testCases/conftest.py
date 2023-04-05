@@ -18,13 +18,16 @@ def setup(browser):
         print("Launching Chrome Browser")
         return driver
     elif browser == 'firefox':
+        option = Options()
+        option.add_argument("--disable-notifications")
         s = Service("E:\Soft\Python_PyCharm\geckodriver.exe")
-        driver = webdriver.Firefox(service=s)
+        driver = webdriver.Firefox(service=s, options=option)
         driver.maximize_window()
         # driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
         print("Launching Firefox Browser")
         return driver
     else:
+
         s = Service("E:\Soft\Python_PyCharm\msedgedriver.exe")
         driver = webdriver.Edge(service=s)
         driver.maximize_window()
