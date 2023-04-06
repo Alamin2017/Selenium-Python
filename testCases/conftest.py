@@ -1,11 +1,15 @@
 from selenium.webdriver.chrome.service import Service
 import pytest
 from selenium import webdriver
+from selenium.webdriver.firefox.service import Service as FirefoxService
+from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.chrome.options import Options
+
 
 
 @pytest.fixture()
 def setup(browser):
+
     if browser == "chrome":
         option = Options()
         option.add_argument('--disable-notifications')
@@ -18,14 +22,14 @@ def setup(browser):
         print("Launching Chrome Browser")
         return driver
     elif browser == 'firefox':
-        option = Options()
-        option.add_argument("--disable-notifications")
-        s = Service("E:\Soft\Python_PyCharm\geckodriver.exe")
-        driver = webdriver.Firefox(service=s, options=option)
-        driver.maximize_window()
-        # driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
+
+        # s = Service("E:\Soft\Python_PyCharm\geckodriver.exe")
+        # driver = webdriver.Firefox(service=s)
+        # driver.maximize_window()
+        driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
         print("Launching Firefox Browser")
         return driver
+
     else:
 
         s = Service("E:\Soft\Python_PyCharm\msedgedriver.exe")
