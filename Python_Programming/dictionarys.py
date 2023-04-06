@@ -1,14 +1,14 @@
-# capitals = {"USA": "Washington", "France": "Paris", "Turkey": "Ankara"}
-# print(type(capitals))
-#
-# france_capital = capitals["France"]
-# print(france_capital)
-# france_capital2 = capitals.get("France")
-# print(france_capital2)
-# all_keys=capitals.keys()
-# all_values=capitals.values()
-# print(all_keys)
-# print(all_values)
+capitals = {"USA": "Washington", "France": "Paris", "Turkey": "Ankara"}
+print(type(capitals))
+
+france_capital = capitals["France"]
+print(france_capital)
+france_capital2 = capitals.get("France")
+print(france_capital2)
+all_keys=capitals.keys()
+all_values=capitals.values()
+print(all_keys)
+print(all_values)
 
 employee = {
     "name": "Al-Amin",
