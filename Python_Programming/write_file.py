@@ -22,8 +22,6 @@ my_string = "I love to program in python Languages"
 #         my_f.write(i + '\n')
 
 
-
-
 import random
 import string
 
@@ -42,9 +40,6 @@ for domain in list_of_domains:
         print(email)
 
 print(all_emails)
-
-
-
 
 with open('output_file_csv.csv', 'w') as f:
     f.write(',\n'.join(all_emails))

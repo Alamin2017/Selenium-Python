@@ -1,6 +1,7 @@
 import random
 import time
 
+
 def is_status_success():
     print("Checking tha status of the process")
     list_to_chose_form = [True, True, False, False, False, False, False]
