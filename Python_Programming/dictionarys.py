@@ -5,8 +5,8 @@ france_capital = capitals["France"]
 print(france_capital)
 france_capital2 = capitals.get("France")
 print(france_capital2)
-all_keys=capitals.keys()
-all_values=capitals.values()
+all_keys = capitals.keys()
+all_values = capitals.values()
 print(all_keys)
 print(all_values)
 
@@ -23,5 +23,3 @@ print(type(e_skills))
 user_skill_count = len(e_skills)
 print(f"user has {user_skill_count} skills")
 print("User has {} skills ".format(user_skill_count))
-
-
