@@ -1,20 +1,26 @@
 import time
 from selenium.webdriver.common.by import By
 
+from utilities.BasePage import BasePage
 
-class ShareBusPage:
+
+class ShareBusPage(BasePage):
+    signInButton = (By.XPATH, "//button[normalize-space()='Sign in']")
+    Email = (By.XPATH, "//input[@id='email']")
+    Pass = (By.XPATH, "//input[@id='password']")
+    logInButton = (By.XPATH, "//button[@type='submit']")
+
     def __init__(self, driver):
-        self.driver = driver
+        super().__init__(driver)
 
     def ClickSignInButton(self):
-        self.driver.find_element(By.XPATH, "//button[normalize-space()='Sign in']").click()
-        time.sleep(3)
+        self.do_click(self.signInButton)
 
     def enterEmail(self, username):
-        self.driver.find_element(By.XPATH, "//input[@id='email']").send_keys(username)
+        self.do_send_keys(self.Email, username)
 
     def enterPass(self, password):
-        self.driver.find_element(By.XPATH, "//input[@id='password']").send_keys(password)
+        self.do_send_keys(self.Pass, password)
 
     def clickLoginInButton(self):
-        self.driver.find_element(By.XPATH, "//button[@type='submit']").click()
+        self.do_click(self.logInButton)

@@ -5,5 +5,5 @@ class TestData:
     LOGIN_PAGE_TITLE = "HubSpot Login"
     Bkash_url = "https://www.bkash.com/en"
     ShareBus_url = "https://test.sharebus.co/"
-
-
+    username = "brainstation23@yopmail.com"
+    password = "Pass@1234"

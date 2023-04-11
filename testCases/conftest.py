@@ -12,6 +12,8 @@ from webdriver_manager.microsoft import EdgeChromiumDriverManager
 @pytest.fixture()
 def setup(browser):
 
+    browser = "chrome"
+
     if browser == "chrome":
         # option = Options()
         # option.add_argument('--disable-notifications')
