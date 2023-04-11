@@ -1,12 +1,13 @@
 from Configurations.config import TestData
 
-
 import time
 
 from pageObjects.LoginPage2 import LoginPage2
 
 
 class Test_Bkash:
+
+    # pytest -v -s --alluredir="C:\Users\hp\PycharmProjects\Selenium_Python\allure_report" testCases/test_bkash.py --browser chrome
 
     def test_bkashurlopen(self, setup):
         self.driver = setup

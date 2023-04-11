@@ -7,8 +7,8 @@ class Test_001_login:
     # terminal test run
     # pytest -v -s testCases/test_login.py
     # pytest -v -s testCases/test_login.py --browser chrome
-    # pytest -v -s -n=2 testCases/test_login.py --browser chrome
-    # pytest -v -s -n=2 --html=reports/report.html testCases/test_login.py --browser chrome
+    # pytest -v -s --html=reports/report.html testCases/test_login.py --browser chrome
+    # pytest -v -s --html=results/my_report.html testCases/test_login.py --browser chrome
 
     def test_homePageTitle(self, setup):
 
