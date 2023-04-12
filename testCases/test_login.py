@@ -9,20 +9,15 @@ class Test_001_login:
     # pytest -v -s testCases/test_login.py --browser chrome
     # pytest -v -s --html=reports/report.html testCases/test_login.py --browser chrome
     # pytest -v -s --html=results/my_report.html testCases/test_login.py --browser chrome
-
     def test_homePageTitle(self, setup):
-
         self.driver = setup
         self.driver.maximize_window()
         self.driver.get("http://admin-demo.nopcommerce.com")
         act_title = self.driver.title
-
         if act_title == "Your store. Login":
             assert True
-            self.driver.close()
         else:
             self.driver.save_screenshot(".\\Screenshots\\" + "test_homepage_title.png")
-            self.driver.close()
             assert False
 
     def test_login(self, setup):
@@ -36,18 +31,12 @@ class Test_001_login:
         self.lp.setUserName("admin@yourstore.com")
         self.lp.setPassword("admin")
         self.lp.clickLogin()
-
         act_title1 = self.driver.title
-
         if act_title1 == "Dashboard / nopCommerce administration":
-
             assert True
             time.sleep(3)
             self.lp.clickLogout()
             time.sleep(3)
-            self.driver.close()
-
         else:
             self.driver.save_screenshot(".\\Screenshots\\" + "test_login_page_title.png")
-            self.driver.close()
             assert False

@@ -10,8 +10,7 @@ from webdriver_manager.microsoft import EdgeChromiumDriverManager
 
 
 @pytest.fixture()
-def setup(browser):
-
+def setup():
     browser = "chrome"
 
     if browser == "chrome":
@@ -20,31 +19,29 @@ def setup(browser):
         # s = Service("E:\Soft\Python_PyCharm\chromedriver.exe")
         # driver = webdriver.Chrome(service=s, options=option)
         # driver.maximize_window()
-
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+        driver.maximize_window()
         print("Launching Chrome Browser")
         return driver
 
     elif browser == 'firefox':
-
         # s = Service("E:\Soft\Python_PyCharm\geckodriver.exe")
         # driver = webdriver.Firefox(service=s)
         # driver.maximize_window()
-
         driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
+        driver.maximize_window()
         print("Launching Firefox Browser")
         return driver
 
-
-    else:
-
+    elif browser == 'edge':
         # s = Service("E:\Soft\Python_PyCharm\msedgedriver.exe")
         # driver = webdriver.Edge(service=s)
         # driver.maximize_window()
-
         driver = webdriver.Edge(EdgeChromiumDriverManager().install())
+        driver.maximize_window()
         print("Launching Edge Browser")
         return driver
+
 
 
 def pytest_addoption(parser):
