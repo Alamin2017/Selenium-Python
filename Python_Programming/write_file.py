@@ -1,25 +1,25 @@
 my_string = "I love to program in python Languages"
-# my_f = open('sample_output.txt', 'w')
-# my_f.write(my_string)
-# my_f.write('\n')
-# my_f.write(my_string)
-# my_f.write('\n')
-# my_f.write(my_string)
-# my_f.write('\n')
-# my_f.write(my_string)
-# my_f.close()
-# with open('programming_file_output.txt', 'w') as my_f:
-#     my_f.write(my_string)
-#
-# my_l = ['user1', 'user2', 'user3', 'user4']
-# with open('sample_output3.txt', 'w') as my_f:
-#     for i in my_l:
-#         my_f.write(i + '\n')
+my_f = open('sample_output.txt', 'w')
+my_f.write(my_string)
+my_f.write('\n')
+my_f.write(my_string)
+my_f.write('\n')
+my_f.write(my_string)
+my_f.write('\n')
+my_f.write(my_string)
+my_f.close()
+with open('programming_file_output.txt', 'w') as my_f:
+    my_f.write(my_string)
 
-# my_langs = ['Python', 'Java', 'PHP', 'Ruby']
-# with open('sample_output3.csv', 'w') as my_f:
-#     for i in my_langs:
-#         my_f.write(i + '\n')
+my_l = ['user1', 'user2', 'user3', 'user4']
+with open('sample_output3.txt', 'w') as my_f:
+    for i in my_l:
+        my_f.write(i + '\n')
+
+my_langs = ['Python', 'Java', 'PHP', 'Ruby']
+with open('sample_output3.csv', 'w') as my_f:
+    for i in my_langs:
+        my_f.write(i + '\n')
 
 
 import random
