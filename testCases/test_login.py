@@ -3,11 +3,12 @@ import time
 from pageObjects.LoginPage import LoginPage
 
 
+
 class Test_001_login:
+
     # terminal test run
     # pytest -v -s testCases/test_login.py
     # pytest -v -s testCases/test_login.py --browser chrome
-    # pytest -v -s --html=reports/report.html testCases/test_login.py --browser chrome
     # pytest -v -s --html=results/my_report.html testCases/test_login.py --browser chrome
     def test_homePageTitle(self, setup):
         self.driver = setup

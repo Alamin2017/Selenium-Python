@@ -22,7 +22,7 @@ def setup(browser):
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
         driver.maximize_window()
         print("Launching Chrome Browser")
-        return driver
+        #return driver
 
     elif browser == 'firefox':
         # s = Service("E:\Soft\Python_PyCharm\geckodriver.exe")
@@ -31,7 +31,7 @@ def setup(browser):
         driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
         driver.maximize_window()
         print("Launching Firefox Browser")
-        return driver
+        #return driver
 
     elif browser == 'edge':
         # s = Service("E:\Soft\Python_PyCharm\msedgedriver.exe")
@@ -40,7 +40,8 @@ def setup(browser):
         driver = webdriver.Edge(EdgeChromiumDriverManager().install())
         driver.maximize_window()
         print("Launching Edge Browser")
-        return driver
+        #return driver
+    return driver
 
 
 
