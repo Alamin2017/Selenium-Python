@@ -10,7 +10,7 @@ from webdriver_manager.microsoft import EdgeChromiumDriverManager
 
 
 @pytest.fixture()
-def setup():
+def setup(browser):
     browser = "chrome"
 
     if browser == "chrome":
@@ -44,10 +44,10 @@ def setup():
 
 
 
-def pytest_addoption(parser):
+def pytest_addoption(parser):   #This will get the value from CLI
     parser.addoption("--browser")
 
 
 @pytest.fixture()
-def browser(request):
+def browser(request):   #This will return the browser value to setup method
     return request.config.getoption("--browser")
