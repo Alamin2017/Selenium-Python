@@ -1,5 +1,5 @@
 {
   "test_login_ddt.py::Test_002_DDT_login::test_login_ddt": true,
   "test_login_ddt.py": true,
-  "test_login.py::Test_001_login": true
+  "test_bkash.py::TestData": true
 }
