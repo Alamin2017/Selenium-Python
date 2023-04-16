@@ -7,12 +7,9 @@ from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
-
-
 @pytest.fixture()
 def setup(browser):
     browser = "chrome"
-
     if browser == "chrome":
         # option = Options()
         # option.add_argument('--disable-notifications')
@@ -23,7 +20,6 @@ def setup(browser):
         driver.maximize_window()
         print("Launching Chrome Browser")
         #return driver
-
     elif browser == 'firefox':
         # s = Service("E:\Soft\Python_PyCharm\geckodriver.exe")
         # driver = webdriver.Firefox(service=s)
@@ -32,7 +28,6 @@ def setup(browser):
         driver.maximize_window()
         print("Launching Firefox Browser")
         #return driver
-
     elif browser == 'edge':
         # s = Service("E:\Soft\Python_PyCharm\msedgedriver.exe")
         # driver = webdriver.Edge(service=s)
@@ -42,13 +37,8 @@ def setup(browser):
         print("Launching Edge Browser")
         #return driver
     return driver
-
-
-
 def pytest_addoption(parser):   #This will get the value from CLI
     parser.addoption("--browser")
-
-
 @pytest.fixture()
 def browser(request):   #This will return the browser value to setup method
     return request.config.getoption("--browser")
