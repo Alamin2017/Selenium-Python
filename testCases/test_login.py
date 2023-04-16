@@ -10,6 +10,7 @@ class Test_001_login:
     # pytest -v -s testCases/test_login.py
     # pytest -v -s testCases/test_login.py --browser chrome
     # pytest -v -s --html=results/my_report.html testCases/test_login.py --browser chrome
+    # pytest -v -s --alluredir="C:\Users\hp\PycharmProjects\Selenium_Python\allure_report" testCases/test_login.py --browser chrome
     def test_homePageTitle(self, setup):
         self.driver = setup
         self.driver.maximize_window()

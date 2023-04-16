@@ -4,20 +4,20 @@ import time
 import pytest
 from pageObjects.LoginPage2 import LoginPage2
 
-import utilities.CustomLogger as cl
+
 
 
 class Test_Bkash:
 
-    log = cl.customLogger()
 
-    # pytest -v -s --alluredir="C:\Users\hp\PycharmProjects\Selenium_Python\allure_report" testCases/test_bkash.py --browser chrome
+
+    # pytest -v -s --alluredir="C:\Users\hp\PycharmProjects\Selenium-Python\allure_report" testCases/test_bkash.py
 
     def test_bkashurlopen(self, setup):
         self.driver = setup
         self.driver.get(TestData.Bkash_url)
         time.sleep(3)
-        self.log.info("bkash url is open")
+
 
     def test_hubspot(self, setup):
         self.driver = setup
@@ -33,7 +33,7 @@ class Test_Bkash:
         time.sleep(2)
         self.lp.do_login(TestData.USER_NAME, TestData.PASSWORD)
         time.sleep(3)
-        self.log.info("test_hubspot test is done")
+
 
 
     def test_title2(self, setup):
@@ -45,4 +45,4 @@ class Test_Bkash:
         title2 = self.lp.get_title__2()
         print(title2)
         assert title2 == TestData.LOGIN_PAGE_TITLE
-        self.log.info("test title assertion is done")
+
