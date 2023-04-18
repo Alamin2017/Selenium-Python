@@ -1,0 +1,7 @@
+[
+  "conftest.py::Test_001::test_fixture",
+  "conftest.py::test_fixture",
+  "test_google.py::Test_Google::test_fixture",
+  "test_one.py::Test_001::test_fixture",
+  "test_one.py::Test_Google::test_fixture"
+]

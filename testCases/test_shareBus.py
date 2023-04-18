@@ -5,6 +5,7 @@ import utilities.CustomLogger as cl
 
 
 class Test_ShareBus:
+
     log = cl.customLogger()
 
     def test_just(self, setup):
