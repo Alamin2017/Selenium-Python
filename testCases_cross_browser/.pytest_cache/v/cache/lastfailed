@@ -4,6 +4,5 @@
   "test_login_ddt.py::Test_002_DDT_login::test_login_ddt": true,
   "test_login_ddt.py": true,
   "test_login.py::Test_001_login::test_homePageTitle": true,
-  "test_login.py::Test_001_login::test_login": true,
-  "test_Fixtures_params.py::Test_Google::test_title[firefox]": true
+  "test_login.py::Test_001_login::test_login": true
 }

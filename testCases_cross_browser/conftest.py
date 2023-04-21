@@ -1,12 +1,14 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.firefox.service import Service as FirefoxService
 import pytest
+from webdriver_manager.firefox import GeckoDriverManager
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from webdriver_manager.chrome import ChromeDriverManager
 
 
-@pytest.fixture(params=['chrome', 'edge'], scope='class')
+@pytest.fixture(params=['chrome', 'edge', 'firefox'], scope='class')
 def init_driver(request):
     if request.param == "chrome":
         # option = Options()
@@ -22,6 +24,10 @@ def init_driver(request):
         # driver = webdriver.Edge(service=s)
         # driver.maximize_window()
         driver = webdriver.Edge(EdgeChromiumDriverManager().install())
+        driver.maximize_window()
+        request.cls.driver = driver
+    elif request.param == 'firefox':
+        driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
         driver.maximize_window()
         request.cls.driver = driver
 

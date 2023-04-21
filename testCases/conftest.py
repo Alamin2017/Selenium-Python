@@ -9,8 +9,8 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 
 
-@pytest.fixture()
-def setup(browser):
+@pytest.fixture(scope='class')
+def setup():
     browser = "chrome"
     if browser == "chrome":
         # option = Options()
@@ -21,7 +21,7 @@ def setup(browser):
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
         driver.maximize_window()
         print("Launching Chrome Browser")
-        # return driver
+        return driver
     elif browser == 'firefox':
         # s = Service("E:\Soft\Python_PyCharm\geckodriver.exe")
         # driver = webdriver.Firefox(service=s)
@@ -29,7 +29,8 @@ def setup(browser):
         driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
         driver.maximize_window()
         print("Launching Firefox Browser")
-        # return driver
+        return driver
+
     elif browser == 'edge':
         # s = Service("E:\Soft\Python_PyCharm\msedgedriver.exe")
         # driver = webdriver.Edge(service=s)
@@ -37,9 +38,7 @@ def setup(browser):
         driver = webdriver.Edge(EdgeChromiumDriverManager().install())
         driver.maximize_window()
         print("Launching Edge Browser")
-        # return driver
-    return driver
-
+        return driver
 
 def pytest_addoption(parser):  # This will get the value from CLI
     parser.addoption("--browser")

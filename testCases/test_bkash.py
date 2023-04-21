@@ -10,7 +10,6 @@ from pageObjects.LoginPage2 import LoginPage2
 class Test_Bkash:
 
 
-
     # pytest -v -s --alluredir="C:\Users\hp\PycharmProjects\Selenium-Python\allure_report" testCases/test_bkash.py
 
     def test_bkashurlopen(self, setup):
@@ -45,4 +44,5 @@ class Test_Bkash:
         title2 = self.lp.get_title__2()
         print(title2)
         assert title2 == TestData.LOGIN_PAGE_TITLE
+
 
