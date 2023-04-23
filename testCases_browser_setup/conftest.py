@@ -12,4 +12,3 @@ def setup():
     driver.maximize_window()
     return driver
 
-

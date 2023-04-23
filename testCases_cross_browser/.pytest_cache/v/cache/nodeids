@@ -1,4 +1,7 @@
 [
+  "test_Fixtures_params.py::Test_Google::test_print_2[chrome]",
+  "test_Fixtures_params.py::Test_Google::test_print_2[edge]",
+  "test_Fixtures_params.py::Test_Google::test_print_2[firefox]",
   "test_Fixtures_params.py::Test_Google::test_title[chrome]",
   "test_Fixtures_params.py::Test_Google::test_title[edge]",
   "test_Fixtures_params.py::Test_Google::test_title[firefox]",
