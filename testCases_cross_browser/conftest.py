@@ -1,5 +1,4 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.firefox.service import Service as FirefoxService
 import pytest
@@ -19,6 +18,7 @@ def init_driver(request):
         driver.maximize_window()
         request.cls.driver = driver
 
+
     elif request.param == "edge":
         # s = Service("D:\2021Project\msedgedriver.exe")
         # driver = webdriver.Edge(service=s)
@@ -26,11 +26,13 @@ def init_driver(request):
         driver = webdriver.Edge(EdgeChromiumDriverManager().install())
         driver.maximize_window()
         request.cls.driver = driver
+
     elif request.param == 'firefox':
         driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
         driver.maximize_window()
         request.cls.driver = driver
 
+
     request.cls.driver = driver
     yield
-    driver.close()
+    driver.quit()

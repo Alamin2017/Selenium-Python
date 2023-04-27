@@ -6,6 +6,7 @@ import pytest
 @pytest.mark.usefixtures("init_driver")
 class Test_Google:
 
+
     def test_title(self):
 
         self.driver.get("https://www.facebook.com/")
